@@ -2,8 +2,9 @@
 
 This project provides an end-to-end solution for detecting face masks in real-time using a deep learning model built with TensorFlow and Keras. The entire pipeline, from data preprocessing and model training to real-time inference, is implemented within Google Colab notebooks.
 
-![Example of 'With Mask' Detection](placeholder-with-mask-image)
-![Example of 'Without Mask' Detection](placeholder-without-mask-image)
+![Example of 'With Mask' Detection](./result%20and%20evaluation/with_mask.png)
+![Example of 'Without Mask' Detection](./result%20and%20evaluation/without_mask.png)
+
 
 ## Table of Contents
 
@@ -20,9 +21,13 @@ This project provides an end-to-end solution for detecting face masks in real-ti
   - [Part 2: Real-Time Detection](#part-2-real-time-detection)
 - [License](#license)
 
+  
+
 ## Project Overview
 
-The objective of this endeavor is the establishment of an automated system with the capacity for ascertaining whether an individual is attired with a facial mask, accomplished through the analysis of a live video transmission. Said objective is realized through the utilization of a Convolutional Neural Network (CNN), predicated upon the MobileNetV2 architectural framework, which subsequently undergoes a process of fine-tuning with a bespoke dataset composed of facial images, both with and without masks. The resultant solution has been engineered for optimal efficiency, precision, and facile reproducibility within a cloud-based computational environment.
+This project is an automated system that detects if a person is wearing a face mask in real-time from a live video stream. It uses a Convolutional Neural Network (CNN) based on the MobileNetV2 architecture, fine-tuned on a custom dataset of faces with and without masks. The solution is designed to be efficient, accurate, and easy to reproduce in a cloud environment.
+
+
 
 ## Features
 
@@ -30,6 +35,8 @@ The objective of this endeavor is the establishment of an automated system with 
 - **Real-Time Inference**: Optimized to process live webcam feeds with minimal latency.
 - **Accessible & Reproducible**: The entire project is built using Google Colab, leveraging free GPU resources.
 - **Visual Feedback**: Provides clear, real-time bounding boxes and confidence scores for each detection.
+
+
 
 ## Technology Stack
 
@@ -39,24 +46,32 @@ The objective of this endeavor is the establishment of an automated system with 
 - **Data Science**: NumPy, Matplotlib
 - **Development Environment**: Google Colab
 
+
+
 ## Results & Performance
 
 The model was trained in two phases (feature extraction and fine-tuning), leading to excellent performance on the validation dataset. The training history plots below show a stable convergence of accuracy and loss, indicating a well-generalized model.
+
+![Training History Visualization](./result%20and%20evaluation/visualization.png)
+
+
 
 ### Final Validation Metrics:
 - **Accuracy**: ~99.5%
 - **Loss**: ~0.02
 
+
+
 ## Getting Started
 
 Follow these steps to set up and run the project in your own Google Colab environment.
 
-## Prerequisites
+### Prerequisites
 
 - A Google Account to access Google Colab and Google Drive.
 - A webcam for the real-time detection part.
 
-## Dataset
+### Dataset
 
 The model was trained on a face mask dataset sourced from Kaggle. You will need to download and prepare this dataset.
 
@@ -68,22 +83,22 @@ The model was trained on a face mask dataset sourced from Kaggle. You will need 
 
 3. **Upload to Google Drive**: Create a folder in your Google Drive (e.g., `FaceMaskData`) and upload the `data.zip` file there. This will allow the Colab notebook to access it easily.
 
-## Setup Instructions
+### Setup Instructions
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/beadarshh/Face-mask-detection-using-deep-learning.git
+   git clone https://github.com/your-username/face-mask-detection.git
    ```
 
 2. **Upload Notebooks**: Upload the two Jupyter notebooks from the repository to your Google Drive:
    - `Face_Mask_Detection_DeepLearning.ipynb`
    - `RealTimeDetection.ipynb`
 
-## How to Run
+### How to Run
 
 The project is split into two main parts, each corresponding to a notebook.
 
-### Part 1: Model Training (`Face_Mask_Detection_DeepLearning.ipynb`)
+#### Part 1: Model Training
 
 This notebook handles data loading, preprocessing, model creation, and training.
 
@@ -99,7 +114,7 @@ The notebook will mount your Google Drive, unzip the dataset, augment the data, 
 
 Upon completion, the trained model (`best_mask_model.h5`) will be saved to your Google Drive.
 
-### Part 2: Real-Time Detection (`RealTimeDetection.ipynb`)
+#### Part 2: Real-Time Detection
 
 This notebook uses the trained model to perform real-time mask detection using your webcam.
 
@@ -115,6 +130,17 @@ This notebook uses the trained model to perform real-time mask detection using y
 
 6. The notebook will process the captured image, detect faces, and draw bounding boxes with the corresponding prediction ("WITH MASK" or "WITHOUT MASK") and confidence score.
 
-## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for any bugs or feature requests.
+
+
+
+## Contact & Support
+
+For any queries, collaboration opportunities, or technical support, please reach out to:
+📧 Email: aadarshpandey9@gmail.com
+
+**⭐ If you found this project helpful, please consider giving it a star! ;)**
