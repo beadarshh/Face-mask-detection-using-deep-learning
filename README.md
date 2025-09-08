@@ -87,7 +87,7 @@ The model was trained on a face mask dataset sourced from Kaggle. You will need 
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/face-mask-detection.git
+   git clone https://github.com/beadarshh/Face-mask-detection-using-deep-learning.git
    ```
 
 2. **Upload Notebooks**: Upload the two Jupyter notebooks from the repository to your Google Drive:
